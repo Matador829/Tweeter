@@ -8,6 +8,14 @@
 
 import UIKit
 
+// global variable refered to appDelegat to be able to call it from any class / fire.swift
+let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+let colorSmoothRed = UIColor(red: 255/255, green: 50/255, blue: 75/255, alpha: 1)
+let colorLightGreen = UIColor(red: 30/255, green: 244/255, blue: 125/255, alpha: 1)
+
+let fontSize12 = UIScreen.mainScreen().bounds.width / 31
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Image to be animated
     let backgroundImg = UIImageView()
+    
+    // boolean to check is errorView showing or not
+    var infoViewIsShowing = false
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -71,6 +82,82 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // error view on top
+    func infoView(message message: String, color:UIColor) {
+        
+        // if errorView is not showing...
+        if infoViewIsShowing == false {
+            
+            // cast as errorView currently showing
+            infoViewIsShowing = true
+            
+           
+            // red background creation
+            let infoView_Height = self.window!.bounds.height / 14.2
+            let infoView_Y = 0 - infoView_Height
+            
+            
+            let infoView = UIView(frame: CGRectMake(0,infoView_Y, self.window!.bounds.width, infoView_Height))
+            infoView.backgroundColor = color
+            self.window!.addSubview(infoView)
+            
+            
+            // errorLabel - label to show error text
+            let infoLabel_Width = infoView.bounds.width
+            let infoLabel_Height = infoView.bounds.height + UIApplication.sharedApplication().statusBarFrame.height / 2
+            
+            let infoLabel = UILabel()
+            infoLabel.frame.size.width = infoLabel_Width
+            infoLabel.frame.size.height = infoLabel_Height
+            infoLabel.numberOfLines = 0
+            
+            infoLabel.text = message
+            infoLabel.font = UIFont(name: "HelveticaNeue", size: fontSize12)
+            infoLabel.textColor = .whiteColor()
+            infoLabel.textAlignment = .Center
+            
+            infoView.addSubview(infoLabel)
+            
+            // animate  error view
+            UIView.animateWithDuration(0.2, animations:{
+                
+                    // move down errorView
+                    infoView.frame.origin.y = 0
+                    
+                    // if animation did finish
+                }, completion: {(finished:Bool) in
+                    
+                    // if it is true
+                    if finished {
+                        
+                        UIView.animateWithDuration(0.1, delay: 4, options: .CurveLinear, animations: {
+                            
+                            // move up errorView
+                            infoView.frame.origin.y = -infoView_Height
+                            
+                            // if finished all animations
+                            }, completion:  {(finished:Bool) in
+                                
+                                if finished {
+                                    
+                                    infoView.removeFromSuperview()
+                                    infoLabel.removeFromSuperview()
+                                    self.infoViewIsShowing = false
+                                }
+                            })
+                        
+                        }
+                })
+            }
+        
+        }
+    
+
+    
+    
+    
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

@@ -79,14 +79,30 @@ class RegisterVC: UIViewController {
                             // get id from parseJSON dictionary
                             let id = parseJSON["id"]
                             
-                            // if there is some id value
+                            // successfully registered
                             if id != nil{
                                 print(parseJSON)
+                                
+                            // error
+                            } else {
+                               
+                                // get main queue to communicate back to user
+                                dispatch_async(dispatch_get_main_queue(),{
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.infoView(message: message, color: colorSmoothRed)
+                                })
+                                
                             }
                             
                             
                         } catch {
-                            print("Caught an error: \(error)")
+                            
+                            // get main queue to communicate back to user
+                            dispatch_async(dispatch_get_main_queue(),{
+                                let message = error as! String
+                                appDelegate.infoView(message: message, color: colorSmoothRed)
+                            })
+                            
                         }
                         
                         
@@ -94,7 +110,13 @@ class RegisterVC: UIViewController {
                    
                  //if unable to proceed request
                 } else {
-                    print("error: \(error)")
+                    
+                    // get main queue to communicate back to user
+                    dispatch_async(dispatch_get_main_queue(),{
+                        let message = error!.localizedDescription
+                        appDelegate.infoView(message: message, color: colorSmoothRed)
+                    })
+                    
                 }
                 
                 // launch prepared session

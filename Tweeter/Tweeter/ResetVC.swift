@@ -63,16 +63,46 @@ class ResetVC: UIViewController {
                                 return
                             }
                             
-                            print(parseJSON)
+                            // successfully reset
+                            let email = parseJSON["email"]
+                            if email != nil {
+                                
+                                // get main queue to communicate back to user
+                                dispatch_async(dispatch_get_main_queue(),{
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.infoView(message: message, color: colorLightGreen)
+                                })
+                                
+                             // error
+                            } else {
+                                
+                                // get main queue to communicate back to user
+                                dispatch_async(dispatch_get_main_queue(),{
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.infoView(message: message, color: colorSmoothRed)
+                                })
+                                
+                            }
                             
                         } catch {
-                            print("Caught an error: \(error)")
+                            
+                            // get main queue to communicate back to user
+                            dispatch_async(dispatch_get_main_queue(),{
+                                let message = error as! String
+                                appDelegate.infoView(message: message, color: colorSmoothRed)
+                            })
                             
                         }
                     })
                     
                 } else {
-                    print("Error: \(error)")
+                    
+                     // get main queue to communicate back to user
+                    dispatch_async(dispatch_get_main_queue(),{
+                        let message = error!.localizedDescription
+                        appDelegate.infoView(message: message, color: colorSmoothRed)
+                    })
+                    
                 }
             }).resume()
         }
