@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2918CD121D2E2A5300491899 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2918CD0F1D2E2A5300491899 /* home.png */; };
+		2918CD131D2E2A5300491899 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2918CD101D2E2A5300491899 /* home@2x.png */; };
+		2918CD141D2E2A5300491899 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2918CD111D2E2A5300491899 /* home@3x.png */; };
+		2918CD171D2E2C0000491899 /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918CD161D2E2C0000491899 /* NavVC.swift */; };
+		2918CD191D2E2E7200491899 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918CD181D2E2E7200491899 /* TabBarVC.swift */; };
+		2918CD1B1D2E386700491899 /* ava.png in Resources */ = {isa = PBXBuildFile; fileRef = 2918CD1A1D2E386700491899 /* ava.png */; };
+		2918CD1D1D2E3C3D00491899 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2918CD1C1D2E3C3D00491899 /* HomeVC.swift */; };
 		293B10221D23565000E480BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B10211D23565000E480BF /* AppDelegate.swift */; };
 		293B10241D23565000E480BF /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B10231D23565000E480BF /* RegisterVC.swift */; };
 		293B10271D23565000E480BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B10251D23565000E480BF /* Main.storyboard */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2918CD0F1D2E2A5300491899 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		2918CD101D2E2A5300491899 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		2918CD111D2E2A5300491899 /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@3x.png"; sourceTree = "<group>"; };
+		2918CD161D2E2C0000491899 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
+		2918CD181D2E2E7200491899 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		2918CD1A1D2E386700491899 /* ava.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ava.png; sourceTree = "<group>"; };
+		2918CD1C1D2E3C3D00491899 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		293B101E1D23565000E480BF /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B10211D23565000E480BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B10231D23565000E480BF /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -41,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2918CD151D2E2A6300491899 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2918CD0F1D2E2A5300491899 /* home.png */,
+				2918CD101D2E2A5300491899 /* home@2x.png */,
+				2918CD111D2E2A5300491899 /* home@3x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		293B10151D23565000E480BF = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +89,15 @@
 				298FBE191D274F30007EA3DE /* ResetVC.swift */,
 				298FBE171D2704EE007EA3DE /* LoginVC.swift */,
 				293B10251D23565000E480BF /* Main.storyboard */,
+				2918CD1A1D2E386700491899 /* ava.png */,
 				293B10281D23565000E480BF /* Assets.xcassets */,
 				293B102A1D23565000E480BF /* LaunchScreen.storyboard */,
 				293B102D1D23565000E480BF /* Info.plist */,
 				2960171A1D2A242900AC1993 /* mainbg.jpg */,
+				2918CD151D2E2A6300491899 /* Icons */,
+				2918CD161D2E2C0000491899 /* NavVC.swift */,
+				2918CD181D2E2E7200491899 /* TabBarVC.swift */,
+				2918CD1C1D2E3C3D00491899 /* HomeVC.swift */,
 			);
 			path = Tweeter;
 			sourceTree = "<group>";
@@ -105,6 +134,7 @@
 				TargetAttributes = {
 					293B101D1D23565000E480BF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3736ASU4XJ;
 					};
 				};
 			};
@@ -132,9 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				293B102C1D23565000E480BF /* LaunchScreen.storyboard in Resources */,
+				2918CD121D2E2A5300491899 /* home.png in Resources */,
+				2918CD1B1D2E386700491899 /* ava.png in Resources */,
 				293B10291D23565000E480BF /* Assets.xcassets in Resources */,
 				293B10271D23565000E480BF /* Main.storyboard in Resources */,
 				2960171B1D2A242900AC1993 /* mainbg.jpg in Resources */,
+				2918CD131D2E2A5300491899 /* home@2x.png in Resources */,
+				2918CD141D2E2A5300491899 /* home@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				298FBE1A1D274F30007EA3DE /* ResetVC.swift in Sources */,
+				2918CD1D1D2E3C3D00491899 /* HomeVC.swift in Sources */,
+				2918CD171D2E2C0000491899 /* NavVC.swift in Sources */,
 				293B10241D23565000E480BF /* RegisterVC.swift in Sources */,
 				293B10221D23565000E480BF /* AppDelegate.swift in Sources */,
+				2918CD191D2E2E7200491899 /* TabBarVC.swift in Sources */,
 				298FBE181D2704EE007EA3DE /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tweeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buendia.Tweeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -272,10 +312,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tweeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buendia.Tweeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

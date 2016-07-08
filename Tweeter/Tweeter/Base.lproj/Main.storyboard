@@ -139,10 +139,93 @@
             </objects>
             <point key="canvasLocation" x="466" y="406"/>
         </scene>
+        <!--HomeVC-->
+        <scene sceneID="eKS-yV-8v9">
+            <objects>
+                <viewController id="rdu-xh-Xdu" customClass="HomeVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nbx-As-4xj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9VA-K3-GYg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sN9-f9-0Dl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ava.png" translatesAutoresizingMaskIntoConstraints="NO" id="8pP-Wh-GmQ">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIZ-NM-efq">
+                                <rect key="frame" x="137" y="20" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJG-WZ-fC7">
+                                <rect key="frame" x="137" y="49" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email@domain.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-MU-OxC">
+                                <rect key="frame" x="137" y="78" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3O-wA-602">
+                                <rect key="frame" x="137" y="93" width="228" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <state key="normal" title="edit profile picture">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="edit_click:" destination="rdu-xh-Xdu" eventType="touchUpInside" id="dV2-qh-kUE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jGk-TQ-bfo">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="hWg-90-8yh">
+                            <connections>
+                                <action selector="logout_click:" destination="rdu-xh-Xdu" id="n1z-QW-r6f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="avaImg" destination="8pP-Wh-GmQ" id="Y5u-IX-Uqq"/>
+                        <outlet property="emailLbl" destination="2gi-MU-OxC" id="CJc-6R-FFD"/>
+                        <outlet property="fullnameLbl" destination="oJG-WZ-fC7" id="wqA-fG-cgy"/>
+                        <outlet property="usernameLbl" destination="RIZ-NM-efq" id="ho0-Tv-PEJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jA3-J8-TPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="1267"/>
+        </scene>
+        <!--Tab BarVC-->
+        <scene sceneID="JRI-vN-SSW">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="6op-iL-WH2" customClass="TabBarVC" customModule="Tweeter" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Pcl-Ro-d9S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1jR-9e-Wsg" kind="relationship" relationship="viewControllers" id="2c5-eN-CiQ"/>
+                        <segue destination="uM8-el-4cJ" kind="relationship" relationship="viewControllers" id="826-U6-C5a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2X-K9-FJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="1267"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="dBy-Jv-NaK">
             <objects>
-                <viewController id="bBR-2f-10e" customClass="LoginVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="bBR-2f-10e" customClass="LoginVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d3l-KA-f8S"/>
                         <viewControllerLayoutGuide type="bottom" id="jMq-5f-KIe"/>
@@ -322,8 +405,67 @@
             </objects>
             <point key="canvasLocation" x="-558" y="406"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="f8x-qW-07Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jR-9e-Wsg" customClass="NavVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="92R-Ip-Afl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YNi-zy-bfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rdu-xh-Xdu" kind="relationship" relationship="rootViewController" id="XH5-sY-kFD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18H-2x-l38" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="1267"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="avj-9G-3k8">
+            <objects>
+                <navigationController id="uM8-el-4cJ" customClass="NavVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="home.png" id="xqj-Mz-4Nz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJT-TD-IF4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="r3I-cu-Rd2" kind="relationship" relationship="rootViewController" id="ANd-tN-GFB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Q6-23-UVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="2143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B3d-eG-fQg">
+            <objects>
+                <viewController id="r3I-cu-Rd2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DjV-xY-3BU"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Wo-8g-X5h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NsU-MJ-yve">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uSv-Uj-BEE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWZ-dV-bVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="2143"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ava.png" width="150" height="150"/>
+        <image name="home.png" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Te-FG-ova"/>
+        <segue reference="kNb-LV-sqU"/>
     </inferredMetricsTieBreakers>
 </document>

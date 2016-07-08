@@ -16,6 +16,8 @@ let colorLightGreen = UIColor(red: 30/255, green: 244/255, blue: 125/255, alpha:
 
 let fontSize12 = UIScreen.mainScreen().bounds.width / 31
 
+var user : NSDictionary?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -37,6 +39,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         backgroundImg.image = UIImage(named: "mainbg.jpg")
         self.window!.addSubview(backgroundImg)
         moveBGLeft()
+        
+        // load content in user var
+        user = NSUserDefaults.standardUserDefaults().valueForKey("parseJSON") as? NSDictionary
+        print(user)
+        
+        // id user once logged in / registered, keep him logged in
+        if user != nil {
+            
+            let id = user!["id"] as? String
+            if id != nil{
+             
+                login()
+                
+            }
+        }
+        
         
         return true
     }
@@ -152,7 +170,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         }
     
-
+    // func to pass to home page to tabBar
+    func login(){
+        
+        // refer to our Main.storyboard
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // store our tabBar Object from Main.storyboard in tabVar var
+        let tabBar = storyBoard.instantiateViewControllerWithIdentifier("tabBar")
+        
+        // present tabBar that is storing in tabBar var
+        window?.rootViewController = tabBar
+        
+    }
     
     
     

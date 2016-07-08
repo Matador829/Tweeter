@@ -81,7 +81,16 @@ class RegisterVC: UIViewController {
                             
                             // successfully registered
                             if id != nil{
-                                print(parseJSON)
+                                
+                                // save user information we received from our host
+                                NSUserDefaults.standardUserDefaults().setObject(parseJSON, forKey: "parseJSON")
+                                user = NSUserDefaults.standardUserDefaults().valueForKey("parseJSON") as? NSDictionary
+                                
+                                // go to tabbar / home page
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    appDelegate.login()
+                                })
+                                
                                 
                             // error
                             } else {
@@ -134,6 +143,11 @@ class RegisterVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // white status bar
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 
 

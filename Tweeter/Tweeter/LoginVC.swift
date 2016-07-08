@@ -79,7 +79,16 @@ class LoginVC: UIViewController {
                          // successfully logged in
                         if id != nil {
                             
-                           
+                            // save user information we received from host
+                            NSUserDefaults.standardUserDefaults().setObject(parseJSON, forKey: "parseJSON")
+                            user = NSUserDefaults.standardUserDefaults().valueForKey("parseJSON") as? NSDictionary
+                            
+                            // go to tabbar / home page
+                            dispatch_async(dispatch_get_main_queue(), {
+                                appDelegate.login()
+                        
+                        })
+                            
                         // error
                         } else {
                             dispatch_async(dispatch_get_main_queue(),{
@@ -111,6 +120,11 @@ class LoginVC: UIViewController {
         }
         
         
+    }
+    
+    // white status bar
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
 

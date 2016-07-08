@@ -109,6 +109,11 @@ class ResetVC: UIViewController {
         
         
     }
+    
+    // white status bar
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
  
 
 
