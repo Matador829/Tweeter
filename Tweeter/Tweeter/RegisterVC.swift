@@ -108,7 +108,7 @@ class RegisterVC: UIViewController {
                             
                             // get main queue to communicate back to user
                             dispatch_async(dispatch_get_main_queue(),{
-                                let message = error as! String
+                                let message = String(error)
                                 appDelegate.infoView(message: message, color: colorSmoothRed)
                             })
                             

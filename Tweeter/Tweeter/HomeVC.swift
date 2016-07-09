@@ -15,6 +15,7 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     @IBOutlet var usernameLbl: UILabel!
     @IBOutlet var fullnameLbl: UILabel!
     @IBOutlet var emailLbl: UILabel!
+    @IBOutlet var editBtn: UIButton!
     
     
     
@@ -57,6 +58,15 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
             })
             
         }
+        
+        // round corners
+        avaImg.layer.cornerRadius =  avaImg.bounds.width / 20
+        avaImg.clipsToBounds = true
+        
+        editBtn.setTitleColor(colorBrandBlue, forState: .Normal)
+        
+        // title on top
+        self.navigationItem.title = username
     
     }
 
@@ -227,6 +237,9 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         // go back to login page
         let loginvc = self.storyboard?.instantiateViewControllerWithIdentifier("LoginVC") as! LoginVC
         self.presentViewController(loginvc, animated: true, completion: nil)
+        for view in self.view.subviews {
+            view.removeFromSuperview()
+        }
         
         
     }

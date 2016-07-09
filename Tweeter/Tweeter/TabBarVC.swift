@@ -15,13 +15,13 @@ class TabBarVC: UITabBarController {
         super.viewDidLoad()
         
         // gray color of tabBar items
-        let color = UIColor(red: 180/255, green: 180/255, blue: 180/255, alpha: 1)
+        let color = colorLightGray
         
         // color of item in tabbar controller
         self.tabBar.tintColor = .whiteColor()
         
         // color of background of tabbar controller
-        self.tabBar.barTintColor = UIColor(red: 45/255, green: 213/255, blue: 255/255, alpha: 1)
+        self.tabBar.barTintColor = colorBrandBlue
         
         // disable translucent
         self.tabBar.translucent = false

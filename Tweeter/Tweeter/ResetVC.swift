@@ -88,7 +88,7 @@ class ResetVC: UIViewController {
                             
                             // get main queue to communicate back to user
                             dispatch_async(dispatch_get_main_queue(),{
-                                let message = error as! String
+                                let message = String(error)
                                 appDelegate.infoView(message: message, color: colorSmoothRed)
                             })
                             
@@ -115,6 +115,11 @@ class ResetVC: UIViewController {
         return UIStatusBarStyle.LightContent
     }
  
-
+    // touched scnreen
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        // hide keyboard
+        self.view.endEditing(false)
+    }
 
 }

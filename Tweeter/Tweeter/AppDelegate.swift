@@ -13,9 +13,12 @@ let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! A
 
 let colorSmoothRed = UIColor(red: 255/255, green: 50/255, blue: 75/255, alpha: 1)
 let colorLightGreen = UIColor(red: 30/255, green: 244/255, blue: 125/255, alpha: 1)
+let colorLightGray = UIColor(red: 180/255, green: 180/255, blue: 180/255, alpha: 1)
+let colorBrandBlue = UIColor(red: 45/255, green: 213/255, blue: 255/255, alpha: 1)
 
 let fontSize12 = UIScreen.mainScreen().bounds.width / 31
 
+// stores all information about user
 var user : NSDictionary?
 
 @UIApplicationMain
