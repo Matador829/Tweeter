@@ -100,7 +100,11 @@ class PostVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDeleg
         self.dismissViewControllerAnimated(true, completion: nil)
         
         // cast as true to save image file in server
-        imageSelected = true
+        if pictureImg.image == info[UIImagePickerControllerEditedImage] as? UIImage{
+           imageSelected = true
+        }
+        
+        
     }
     
     // custom body of HTTP request to upload image file
@@ -198,9 +202,11 @@ class PostVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDeleg
                             
                             // reser UI
                             self.textTxt.text = ""
+                            self.countLbl.text = "140"
                             self.pictureImg.image = UIImage()
                             self.postBtn.enabled = false
                             self.postBtn.alpha = 0.4
+                            self.imageSelected = false
                             
                             // switch to another scene
                             self.tabBarController?.selectedIndex = 0
