@@ -203,7 +203,7 @@ class PostVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDeleg
                             // reser UI
                             self.textTxt.text = ""
                             self.countLbl.text = "140"
-                            self.pictureImg.image = UIImage()
+                            self.pictureImg.image = nil
                             self.postBtn.enabled = false
                             self.postBtn.alpha = 0.4
                             self.imageSelected = false
@@ -219,6 +219,7 @@ class PostVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDeleg
                             let message = String(error)
                             appDelegate.infoView(message: message, color: colorSmoothRed)
                         })
+                        return
                     }
                     
                 } else {
@@ -227,6 +228,7 @@ class PostVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDeleg
                         let message = error!.localizedDescription
                         appDelegate.infoView(message: message, color: colorSmoothRed)
                     })
+                    return
                 }
                 
             })

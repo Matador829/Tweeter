@@ -100,7 +100,7 @@ class RegisterVC: UIViewController {
                                     let message = parseJSON["message"] as! String
                                     appDelegate.infoView(message: message, color: colorSmoothRed)
                                 })
-                                
+                                return
                             }
                             
                             
@@ -111,6 +111,7 @@ class RegisterVC: UIViewController {
                                 let message = String(error)
                                 appDelegate.infoView(message: message, color: colorSmoothRed)
                             })
+                            return
                             
                         }
                         
@@ -125,6 +126,7 @@ class RegisterVC: UIViewController {
                         let message = error!.localizedDescription
                         appDelegate.infoView(message: message, color: colorSmoothRed)
                     })
+                    return
                     
                 }
                 

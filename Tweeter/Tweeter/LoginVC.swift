@@ -95,6 +95,7 @@ class LoginVC: UIViewController {
                             let message = parseJSON["message"] as! String
                             appDelegate.infoView(message: message, color: colorSmoothRed)
                             })
+                            return
                             
                         }
                         
@@ -104,6 +105,7 @@ class LoginVC: UIViewController {
                             let message = String(error)
                            appDelegate.infoView(message: message, color: colorSmoothRed)
                         })
+                        return
                     }
                     
                 } else {
@@ -112,6 +114,7 @@ class LoginVC: UIViewController {
                         let message = error!.localizedDescription
                         appDelegate.infoView(message: message, color: colorSmoothRed)
                     })
+                    return
                 }
                 
             }).resume()

@@ -428,10 +428,109 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
             
             
         }.resume()
+    
         
+    }
+    
+    // DELETE SECTION
+    // allow edit cell
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    // if cell swiped...
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // we pressed delete button from swiped cell
+        if editingStyle == .Delete {
+            
+            // send delete PHP request
+            deletePost(indexPath)
+            
+        }
+        
+    }
+    
+    // delete post php request
+    func deletePost(indexPath : NSIndexPath) {
+        
+        // shortcuts
+        let tweet = tweets[indexPath.row]
+        let uuid = tweet["uuid"] as! String 
+        let path = tweet["path"] as! String
+        
+        
+        let url = NSURL(string: "http://localhost/Tweeter/posts.php")! // access php file
+        let request = NSMutableURLRequest(URL: url) // declare request to proceed url
+        request.HTTPMethod = "POST" // declare method of passing inf to php
+        let body = "uuid=\(uuid)&path=\(path)" // body - passing info
+        request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding) // supports all languages
+        
+        // launch php request
+        NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
+            
+            // get main queue to this block of code to communicate back in other case it will do all this in backgroud
+            dispatch_async(dispatch_get_main_queue(), { 
+                
+                if error == nil {
+                    
+                    do {
+                        
+                        // get back from server $returnArray of php file
+                        let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+                        
+                        // secure way to declare new var to store (e.g. json) data
+                        guard let parseJSON = json else {
+                            print("Error while parsing")
+                            return
+                        }
+                        
+                        // we are getting content of $returnArray under value "result" -> $returnArray["result"]
+                        let result = parseJSON["result"]
+                        // if result exists - deleted successfully
+                        if result != nil {
+                            
+                            self.tweets.removeAtIndex(indexPath.row) // remove related content from array
+                            self.images.removeAtIndex(indexPath.row) // remove related picture
+                            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic) // remove table cell
+                            self.tableView.reloadData() // reload table to show updates
+                            
+                        } else {
+                              // get main queue to communicate back to user
+                            dispatch_async(dispatch_get_main_queue(),{
+                                let message = parseJSON["message"] as! String
+                                appDelegate.infoView(message: message, color: colorSmoothRed)
+                            })
+                            return
+                        }
+                        
+                    } catch {
+                        // get main queue to communicate back to user
+                        dispatch_async(dispatch_get_main_queue(),{
+                            let message = String(error)
+                            appDelegate.infoView(message: message, color: colorSmoothRed)
+                        })
+                        return
+                    }
+                    
+                    
+                } else {
+                    // get main queue to communicate back to user
+                    dispatch_async(dispatch_get_main_queue(),{
+                        let message = error!.localizedDescription
+                        appDelegate.infoView(message: message, color: colorSmoothRed)
+                    })
+                    return
+                }
+                
+                
+            })
+            
+        }.resume()
         
         
     }
+    
     
 }
 
