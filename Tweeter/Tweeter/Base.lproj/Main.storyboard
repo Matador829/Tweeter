@@ -322,6 +322,7 @@
                     <connections>
                         <segue destination="1jR-9e-Wsg" kind="relationship" relationship="viewControllers" id="2c5-eN-CiQ"/>
                         <segue destination="uM8-el-4cJ" kind="relationship" relationship="viewControllers" id="826-U6-C5a"/>
+                        <segue destination="W6x-ZL-2UL" kind="relationship" relationship="viewControllers" id="uKk-6J-u7P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2X-K9-FJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -653,9 +654,89 @@
             </objects>
             <point key="canvasLocation" x="487" y="2143"/>
         </scene>
+        <!--USERS-->
+        <scene sceneID="mcR-6A-OoL">
+            <objects>
+                <tableViewController id="ZgC-UH-baB" customClass="UsersVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ua7-zZ-Ud8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="7UO-j9-U5v">
+                            <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="ZgC-UH-baB" id="xNt-j6-UtJ"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="EL5-be-nEY" customClass="UsersCell" customModule="Tweeter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EL5-be-nEY" id="RK3-C2-jqB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ava.png" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-5c-bFr">
+                                            <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdS-gG-Xo8">
+                                            <rect key="frame" x="80" y="8" width="290" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fr7-BS-lbz">
+                                            <rect key="frame" x="80" y="37" width="290" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avaImg" destination="cLF-5c-bFr" id="SKj-zT-gaL"/>
+                                    <outlet property="fullnameLbl" destination="Fr7-BS-lbz" id="Jke-1d-YDj"/>
+                                    <outlet property="usernameLbl" destination="wdS-gG-Xo8" id="EzK-QA-uwN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZgC-UH-baB" id="mn6-F1-Dbj"/>
+                            <outlet property="delegate" destination="ZgC-UH-baB" id="aLM-Sg-iI3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="USERS" id="9ke-HI-5BW"/>
+                    <connections>
+                        <outlet property="searchBar" destination="7UO-j9-U5v" id="pQE-fW-K4Q"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQH-kf-OpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="2966"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="EYr-MC-GoV">
+            <objects>
+                <navigationController id="W6x-ZL-2UL" customClass="NavVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Users" image="Search.png" id="PJT-vZ-Z6s"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aef-tx-krs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZgC-UH-baB" kind="relationship" relationship="rootViewController" id="7RE-25-0f8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bq-SG-EZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="2982"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Post.png" width="25" height="25"/>
+        <image name="Search.png" width="25" height="25"/>
         <image name="ava.png" width="150" height="150"/>
         <image name="home.png" width="25" height="25"/>
     </resources>
