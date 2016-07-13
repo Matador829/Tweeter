@@ -32,6 +32,7 @@
 		298FBE181D2704EE007EA3DE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE171D2704EE007EA3DE /* LoginVC.swift */; };
 		298FBE1A1D274F30007EA3DE /* ResetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE191D274F30007EA3DE /* ResetVC.swift */; };
 		29ABFC561D31AD92009C7C25 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ABFC551D31AD92009C7C25 /* PostCell.swift */; };
+		29BCF4D81D3605C70079CDF6 /* GuestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCF4D71D3605C70079CDF6 /* GuestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		298FBE171D2704EE007EA3DE /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		298FBE191D274F30007EA3DE /* ResetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetVC.swift; sourceTree = "<group>"; };
 		29ABFC551D31AD92009C7C25 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		29BCF4D71D3605C70079CDF6 /* GuestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				294B84061D30717B0050BDE4 /* PostVC.swift */,
 				290DB7B81D344D7B00561C80 /* UsersVC.swift */,
 				290DB7BA1D344DAF00561C80 /* UsersCell.swift */,
+				29BCF4D71D3605C70079CDF6 /* GuestVC.swift */,
 				2918CD1A1D2E386700491899 /* ava.png */,
 				293B10281D23565000E480BF /* Assets.xcassets */,
 				293B102A1D23565000E480BF /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				298FBE1A1D274F30007EA3DE /* ResetVC.swift in Sources */,
+				29BCF4D81D3605C70079CDF6 /* GuestVC.swift in Sources */,
 				2918CD1D1D2E3C3D00491899 /* HomeVC.swift in Sources */,
 				2918CD171D2E2C0000491899 /* NavVC.swift in Sources */,
 				293B10241D23565000E480BF /* RegisterVC.swift in Sources */,

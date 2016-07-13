@@ -415,12 +415,20 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
                         self.tableView.reloadData()
                         
                     } catch {
-                        print("Caught an error: \(error)")
+                        dispatch_async(dispatch_get_main_queue(),{
+                            let message = String(error)
+                            appDelegate.infoView(message: message, color: colorSmoothRed)
+                        })
+                        return
                     }
                     
                     
                 } else {
-                    print("error: \(error)")
+                    dispatch_async(dispatch_get_main_queue(),{
+                        let message = error!.localizedDescription
+                        appDelegate.infoView(message: message, color: colorSmoothRed)
+                    })
+                    return
                 }
                 
                 

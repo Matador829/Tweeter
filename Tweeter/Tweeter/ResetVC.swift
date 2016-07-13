@@ -32,6 +32,9 @@ class ResetVC: UIViewController {
         
         } else {
             
+            // remove keyboard
+            self.view.endEditing(true)
+            
             let email = emailTxt.text!.lowercaseString
             
            // send mysql / php. request

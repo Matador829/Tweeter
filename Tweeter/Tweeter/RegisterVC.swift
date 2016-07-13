@@ -44,6 +44,9 @@ class RegisterVC: UIViewController {
             //if text is entered
         } else {
             
+            // remove keyboard
+            self.view.endEditing(true)
+            
             // URL to php file
             let url = NSURL(string: "http://localhost/Tweeter/register.php")!
             

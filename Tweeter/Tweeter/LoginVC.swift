@@ -39,6 +39,9 @@ class LoginVC: UIViewController {
             //if text is entered
         } else {
             
+            // remove keyboard
+            self.view.endEditing(true)
+            
             // shortcuts
             let username = usernameTxt.text!.lowercaseString
             let password = passwordTxt.text!
