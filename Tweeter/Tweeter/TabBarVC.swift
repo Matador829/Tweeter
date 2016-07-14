@@ -41,6 +41,56 @@ class TabBarVC: UITabBarController {
             
             
         }
+        
+        // call Animation of Tweeter
+        tweeterAnimation()
+    }
+    
+    // Tweeter Brand Animation
+    func tweeterAnimation() {
+        
+        let layer = UIView() // declare var of type UIView
+        layer.frame = self.view.frame // declare size = same as screen
+        layer.backgroundColor = colorBrandBlue // color of view
+        self.view.addSubview(layer) // add view to vc
+        
+        // Tweeter icon
+        let icon = UIImageView() // declare var of type uiImageView Because it stores an image
+        icon.image = UIImage(named: "logo.png") // we refer to our image to be stored
+        icon.frame.size.width = 200 // width of image view
+        icon.frame.size.height = 200 // heigh of image view
+        icon.center = view.center // center imageview as per screen size
+        self.view.addSubview(icon) // imageview to vc
+        
+        // starting animation
+        UIView.animateWithDuration(0.5, delay: 1, options: .CurveLinear, animations: {
+            
+            // make small bird
+            icon.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            
+        }) { (finished:Bool) in
+            
+            if finished {
+                
+                // second animation
+                UIView.animateWithDuration(0.5, animations: { 
+                    
+                   // make big icon
+                    icon.transform = CGAffineTransformMakeScale(20, 20)
+                    
+                    // third animation
+                    UIView.animateWithDuration(0.1, delay: 0.3, options: .CurveLinear, animations: { 
+                        
+                        icon.alpha = 0
+                        layer.alpha = 0
+                        
+                        }, completion: nil)
+                    
+                })
+                
+            }
+        
+        }
     }
 
 

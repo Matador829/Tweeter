@@ -84,6 +84,44 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     
     // edit button clicked
     @IBAction func edit_click(sender: AnyObject) {
+       
+        // declare sheet
+        let sheet = UIAlertController(title: "Edit Profile", message: nil, preferredStyle: .ActionSheet)
+        
+        // cancel button
+        let cancelBtn = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        // change picture clicked
+        let pictureBtn = UIAlertAction(title: "Change Picture", style: .Default) { (action:UIAlertAction) in
+            self.selectAva()
+        }
+        
+        // update profile clicked
+        let editBtn = UIAlertAction(title: "Update Profile", style: .Default) { (action: UIAlertAction) in
+            
+            // delcare var to store edit vc scene from main.stbrd
+            let editvc = self.storyboard!.instantiateViewControllerWithIdentifier("EditVC") as! EditVC
+            self.navigationController?.pushViewController(editvc, animated: true)
+            
+            // remove title from back button
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            self.navigationItem.backBarButtonItem = backItem
+            
+        }
+        
+        // add actions to sheet
+        sheet.addAction(cancelBtn)
+        sheet.addAction(pictureBtn)
+        sheet.addAction(editBtn)
+        
+        // present action sheet
+        self.presentViewController(sheet, animated: true, completion: nil)
+        
+    }
+    
+    // select profile picture
+    func selectAva() {
         // select ava
         let picker = UIImagePickerController()
         picker.delegate = self
