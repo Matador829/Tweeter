@@ -86,9 +86,17 @@ class LoginVC: UIViewController {
                             NSUserDefaults.standardUserDefaults().setObject(parseJSON, forKey: "parseJSON")
                             user = NSUserDefaults.standardUserDefaults().valueForKey("parseJSON") as? NSDictionary
                             
+                            // Clear text fields
+                            self.usernameTxt.text = ""
+                            self.passwordTxt.text = ""
+                            
+                            self.view.removeFromSuperview()
+                            
                             // go to tabbar / home page
                             dispatch_async(dispatch_get_main_queue(), {
                                 appDelegate.login()
+                                
+                                
                         
                         })
                             

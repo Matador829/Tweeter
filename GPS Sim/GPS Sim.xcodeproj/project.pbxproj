@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		297DD0F31D3B75F000627089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DD0F21D3B75F000627089 /* AppDelegate.swift */; };
+		297DD0F51D3B75F000627089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DD0F41D3B75F000627089 /* ViewController.swift */; };
+		297DD0F81D3B75F000627089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297DD0F61D3B75F000627089 /* Main.storyboard */; };
+		297DD0FA1D3B75F000627089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297DD0F91D3B75F000627089 /* Assets.xcassets */; };
+		297DD0FD1D3B75F000627089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297DD0FB1D3B75F000627089 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		297DD0EF1D3B75F000627089 /* GPS Sim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPS Sim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		297DD0F21D3B75F000627089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		297DD0F41D3B75F000627089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		297DD0F71D3B75F000627089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		297DD0F91D3B75F000627089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		297DD0FC1D3B75F000627089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		297DD0FE1D3B75F000627089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		297DD0EC1D3B75F000627089 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		297DD0E61D3B75F000627089 = {
+			isa = PBXGroup;
+			children = (
+				297DD0F11D3B75F000627089 /* GPS Sim */,
+				297DD0F01D3B75F000627089 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		297DD0F01D3B75F000627089 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				297DD0EF1D3B75F000627089 /* GPS Sim.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		297DD0F11D3B75F000627089 /* GPS Sim */ = {
+			isa = PBXGroup;
+			children = (
+				297DD0F21D3B75F000627089 /* AppDelegate.swift */,
+				297DD0F41D3B75F000627089 /* ViewController.swift */,
+				297DD0F61D3B75F000627089 /* Main.storyboard */,
+				297DD0F91D3B75F000627089 /* Assets.xcassets */,
+				297DD0FB1D3B75F000627089 /* LaunchScreen.storyboard */,
+				297DD0FE1D3B75F000627089 /* Info.plist */,
+			);
+			path = "GPS Sim";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		297DD0EE1D3B75F000627089 /* GPS Sim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 297DD1011D3B75F000627089 /* Build configuration list for PBXNativeTarget "GPS Sim" */;
+			buildPhases = (
+				297DD0EB1D3B75F000627089 /* Sources */,
+				297DD0EC1D3B75F000627089 /* Frameworks */,
+				297DD0ED1D3B75F000627089 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GPS Sim";
+			productName = "GPS Sim";
+			productReference = 297DD0EF1D3B75F000627089 /* GPS Sim.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		297DD0E71D3B75F000627089 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Julio Buendia";
+				TargetAttributes = {
+					297DD0EE1D3B75F000627089 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 297DD0EA1D3B75F000627089 /* Build configuration list for PBXProject "GPS Sim" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 297DD0E61D3B75F000627089;
+			productRefGroup = 297DD0F01D3B75F000627089 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				297DD0EE1D3B75F000627089 /* GPS Sim */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		297DD0ED1D3B75F000627089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297DD0FD1D3B75F000627089 /* LaunchScreen.storyboard in Resources */,
+				297DD0FA1D3B75F000627089 /* Assets.xcassets in Resources */,
+				297DD0F81D3B75F000627089 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		297DD0EB1D3B75F000627089 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297DD0F51D3B75F000627089 /* ViewController.swift in Sources */,
+				297DD0F31D3B75F000627089 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		297DD0F61D3B75F000627089 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				297DD0F71D3B75F000627089 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		297DD0FB1D3B75F000627089 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				297DD0FC1D3B75F000627089 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		297DD0FF1D3B75F000627089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		297DD1001D3B75F000627089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		297DD1021D3B75F000627089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GPS Sim/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.buendia.GPS-Sim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		297DD1031D3B75F000627089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GPS Sim/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.buendia.GPS-Sim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		297DD0EA1D3B75F000627089 /* Build configuration list for PBXProject "GPS Sim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				297DD0FF1D3B75F000627089 /* Debug */,
+				297DD1001D3B75F000627089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		297DD1011D3B75F000627089 /* Build configuration list for PBXNativeTarget "GPS Sim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				297DD1021D3B75F000627089 /* Debug */,
+				297DD1031D3B75F000627089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 297DD0E71D3B75F000627089 /* Project object */;
+}

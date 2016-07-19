@@ -135,7 +135,7 @@ class EditVC: UIViewController, UITextFieldDelegate {
             
             // shortcuts
             let username = usernameTxt.text!.lowercaseString
-            let fullname = fullnameLbl.text
+            let fullname = fullnameLbl.text!
             let email = emailTxt.text!.lowercaseString
             let id = user!["id"]!
             

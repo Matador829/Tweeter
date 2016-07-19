@@ -88,6 +88,8 @@ class RegisterVC: UIViewController {
                                 // save user information we received from our host
                                 NSUserDefaults.standardUserDefaults().setObject(parseJSON, forKey: "parseJSON")
                                 user = NSUserDefaults.standardUserDefaults().valueForKey("parseJSON") as? NSDictionary
+
+                                
                                 
                                 // go to tabbar / home page
                                 dispatch_async(dispatch_get_main_queue(), {
@@ -141,7 +143,7 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func loginButton(sender: AnyObject) {
-    
+        
     
     }
 

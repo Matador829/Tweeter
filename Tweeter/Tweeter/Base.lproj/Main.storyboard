@@ -164,7 +164,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UVZ-zK-Mzl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -173,7 +173,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Qlf-Se-vlP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -182,7 +182,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="xgV-UY-Y5Z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -191,7 +191,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="tTo-Aa-KaS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <state key="normal" title="edit profile">
                                     <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -382,7 +382,7 @@
                                     <constraint firstAttribute="height" constant="21" id="lp1-Hr-wZt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -449,7 +449,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dCi-y1-bd5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -458,7 +458,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0TC-vI-5J2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -467,7 +467,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YZy-rD-Pst"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -917,7 +917,7 @@
             </objects>
             <point key="canvasLocation" x="487" y="2143"/>
         </scene>
-        <!--USERS-->
+        <!--Users-->
         <scene sceneID="mcR-6A-OoL">
             <objects>
                 <tableViewController id="ZgC-UH-baB" customClass="UsersVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
@@ -971,7 +971,7 @@
                             <outlet property="delegate" destination="ZgC-UH-baB" id="aLM-Sg-iI3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="USERS" id="9ke-HI-5BW"/>
+                    <navigationItem key="navigationItem" title="Users" id="9ke-HI-5BW"/>
                     <connections>
                         <outlet property="searchBar" destination="7UO-j9-U5v" id="pQE-fW-K4Q"/>
                     </connections>

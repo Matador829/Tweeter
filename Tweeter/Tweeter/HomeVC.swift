@@ -72,9 +72,12 @@ class HomeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         
         // title on top
         self.navigationItem.title = username
+        self.navigationItem.title = self.navigationItem.title?.lowercaseString
         
         // table view top line
         tableView.contentInset = UIEdgeInsetsMake(2, 0, 0, 0)
+        
+       
         
         
     
